@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+.header{
+   display: flex;
+justify-content: space-around ;
+ 
+  padding: 15px 0;
+}
+
+
+
+ul{
+  list-style-type:none;
+}
+
+.header ul{
+  display: flex;
+  gap: 30px;
+}
+.header .list a{
+  color:red
+}
+
+.header form{
+  border: 2px solid #E7E6EF;
+  display: flex;
+
+}
+.header form button{
+  background-color: #FB2E86;
+
+}
