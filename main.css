@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body{
+  height: 6000px;
+}
 a{
   text-decoration: none;
 }
@@ -11,8 +13,11 @@ a{
 .header{
    display: flex;
 justify-content: space-around ;
- 
+ align-items: center;
   padding: 15px 0;
+position: fixed;
+width:100% ;
+background: wheat;
 }
 
 
@@ -27,6 +32,7 @@ ul{
 }
 .header .list a{
   color:red
+
 }
 
 .header form{
@@ -37,4 +43,8 @@ ul{
 .header form button{
   background-color: #FB2E86;
 
+}
+
+.header .list :hover{
+  color: aquamarine;
 }
