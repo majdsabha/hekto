@@ -226,3 +226,18 @@ gap:   20px;
 .color.blue { background: #2F1AC4; }
 .color.navy { background: #3F509E; }
 
+@media (max-width: 900px) {
+    .card {
+        gap: 20px;
+    }
+    .product-card {
+        width: 45%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .product-card {
+        width: 90%;
+    }
+}
