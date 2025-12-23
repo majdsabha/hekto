@@ -350,3 +350,183 @@ width: calc((100% - 22px) / 2);
     margin-top: 40px;
   }
 }
+/* end hero*/
+
+/* leatest product*/
+.container{
+ width: 1100px;
+ max-width: 92%;
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+/* Title */
+.title{
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1b2a6b;
+  margin-bottom: 14px;
+}
+
+/* Tabs */
+.tabs{
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.tab a{
+  text-decoration: none;
+  font-size: 13px;
+  color: #3c4a7a;
+  padding: 6px 2px;
+  display: inline-block;
+  position: relative;
+}
+.tab.active a{
+  color: #ff4c6a; /* زي الوردي بالصورة */
+}
+.tab.active a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #ff4c6a;
+  border-radius: 10px;
+}
+
+/* Grid */
+.leatest-products .grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 38px 46px;
+  justify-items: center;
+}
+
+/* Card */
+.leatest-products .card{
+
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+    
+
+}
+
+.leatest-products .img-wrap{
+  width: 100%;
+  height: 210px;
+  border: 1px solid #F7F7F7;
+  background: #F7F7F7;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+
+.img-wrap img{
+  max-width: 75%;
+  max-height: 75%;
+  object-fit: contain;
+}
+
+/* Hover */
+.leatest-products .card{
+  background:#F7F7F7;
+  border-radius: 12px;
+  padding: 30px 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: box-shadow .3s ease, transform .3s ease;
+}
+
+.leatest-products .card:hover{
+  box-shadow: 0 18px 45px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+}
+/* Name & Price */
+.leatest-products .name{
+  font-size: 12px;
+  font-weight: 600;
+  color: #2f3a72;
+  margin: 0;
+}
+
+.leatest-products .price{
+  margin: 0;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.price .new{
+  color: #2341d6; /* أزرق السعر */
+  font-weight: 700;
+}
+.price .old{
+  color: #ff4c6a;
+  text-decoration: line-through;
+  font-weight: 600;
+}
+
+/* Badge Sale */
+.badge{
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  background: #2f4bff;
+  color: #fff;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* Side Icons (only show nicely on hover or always - حسب ما تحب) */
+.leatest-products .actions{
+  position: absolute;
+  left: 10px;
+  top: 52px;
+  display: grid;
+  gap: 10px;
+
+  opacity: 0;                 
+  visibility: hidden;
+  transform: translateX(-8px); 
+  transition: all .25s ease;
+}
+.img-wrap:hover .actions{
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+.icon{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #e6e9ff;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  display: grid;
+  place-items: center;
+  transition: transform .15s ease;
+}
+.icon:hover{ transform: scale(1.06); }
+
+/* Responsive */
+@media (max-width: 900px){
+  .grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px){
+  .grid{ grid-template-columns: 1fr; }
+  .img-wrap{ height: 230px; }
+}
