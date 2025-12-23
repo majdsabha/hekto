@@ -695,3 +695,120 @@ width: calc((100% - 22px) / 2);
   .trending-products .tp-grid{ grid-template-columns: 1fr; }
   .trending-products .tp-card{ width: min(260px, 92%); margin: 0 auto; }
 }
+
+.top-categories{
+  padding: 70px 0;
+  background:#FFF;
+}
+
+.top-categories .tc-title{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: #1b2a6b;
+  margin-bottom: 40px;
+}
+
+.top-categories .tc-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-items: center;
+}
+
+.top-categories .tc-card{
+  text-align: center;
+}
+
+
+.top-categories .tc-circle{
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background:#F6F7FB ;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.top-categories .tc-circle img{
+  width: 90px;
+  height: auto;
+  object-fit: contain;
+  z-index: 2;
+}
+
+
+
+.top-categories .tc-circle::before{
+  content:"";
+  position:absolute;
+
+  
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  width: auto;
+  height: 100px;                 
+
+  border-radius: 0 0 190px 190px; 
+  border-left: 5px solid #7b61ff; 
+  border-bottom: 5px solid #7b61ff;
+
+  transform: rotate(9deg);      
+  opacity: 0;
+  z-index: 1;
+}
+
+.top-categories .tc-btn{
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #13c27a;
+  color: #fff;
+  font-size: 11px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  opacity: 0;
+  z-index: 3;
+  transition: .25s ease;
+}
+
+
+.top-categories .tc-card:hover .tc-circle::before,
+.top-categories .tc-card.active .tc-circle::before{
+  opacity: 1;
+}
+
+.top-categories .tc-card:hover .tc-btn,
+.top-categories .tc-card.active .tc-btn{
+  opacity: 1;
+}
+
+
+.top-categories .tc-name{
+  margin-top: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1b2a6b;
+}
+
+.top-categories .tc-price{
+  margin-top: 6px;
+  font-size: 11px;
+  color: #1b2a6b;
+  opacity: .8;
+}
+
+
+@media (max-width: 900px){
+  .top-categories .tc-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px){
+  .top-categories .tc-grid{ grid-template-columns: 1fr; }
+}
